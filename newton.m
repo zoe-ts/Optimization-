@@ -1,4 +1,4 @@
-function x_star = newton(f,n,x,x_k)
+function [x_star,f_star] = newton(f,n,x,x_k)
 %An implementation of Newton's Method for optimization 
 %
 %Inputs: 
@@ -54,5 +54,6 @@ while (tol>=e)
 end
 
 x_star=x_k;
+f_star=subs(f,x,x_star);
 end
 
