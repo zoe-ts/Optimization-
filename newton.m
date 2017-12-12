@@ -47,7 +47,7 @@ while (tol>=e)
 %new estimation
 	x_k1=x_k+optl.*s;				 
 	Grad_fk1=subs(Grad_f,x,x_k1);
-    df_k1=norm(Grad_fk1,Inf);
+    	df_k1=norm(Grad_fk1,Inf);
 	tol=abs(df_k1);
 	x_k=x_k1;
 	i=i+1;
