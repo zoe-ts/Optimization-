@@ -36,7 +36,7 @@ H_fk=subs(H_f,x,x_k);
 
 % Newton's Algorithm
 while (tol>=e) 
-	Grad_fk=subs(Grad_f,x,x_k);
+	Grad_fk=subs(Grad_f,x,x_k); 
 %search direction
 	s=-H_fk^(-1)*Grad_fk;		
 %optimal step length
