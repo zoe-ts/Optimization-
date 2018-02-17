@@ -1,8 +1,9 @@
-function [x_star,f_star] = pso(f,n,max_it,dim)
+function [x_star,f_star] = pso(f,y,n,max_it,dim)
 %An implementation of Particle Swarm Optimization Method  
 %
 %Inputs: 
 %   f: objective function
+%   y: symbolic vector of dim size 
 %   n: number of particles
 %   dim: number of dimensions 
 %Outputs:
@@ -13,7 +14,6 @@ function [x_star,f_star] = pso(f,n,max_it,dim)
 
 %Initialization
 it=1;				%iteration number
-y = sym('y', [dim, 1]);
 u=zeros(dim,n);
 for i=1:n
     for jj=1:dim
@@ -42,7 +42,7 @@ for j=1:n
     end
 end
 
-%PSœ algorithm
+%PS√è algorithm
 while k<1 && it<max_it
 
 for j=1:n
